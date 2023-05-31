@@ -1,50 +1,52 @@
 import { StatusBar } from 'expo-status-bar';
-import {View,StyleSheet,Text } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
 
 export default function App() {
   return (
-      <View style={Style.container}>
-        <StatusBar style='light'/>
-        <View style={Style.city}>
-          <Text style={Style.cityName}>WONJU</Text>
-        </View>
-        <View style = {Style.wether}>
-          <View style = {Style.day}>
-          <Text stytle = {Style.temp}>27</Text>
-          <Text style = {Style.desp}>sunny</Text>
-          </View>
+    <View style={styles.container}>
+      <StatusBar style="light" />
+      <View style={styles.city}>
+        <Text style={styles.cityName}>Wonju-Si</Text>
+      </View>
+      <View style={styles.weather}>
+        <View style={styles.day}>
+          <Text style={styles.temp}>27</Text>
+          <Text style={styles.desc}>sunny</Text>
         </View>
       </View>
+    </View>
   );
 }
-const Style = StyleSheet.create({
-  container : {
-    flex : 1,
-    backgroundColor : "khaki",
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'khaki',
   },
-  city : {
-    flex : 1,
-    justifyContent : "center",
-    alignItems : "center",
+  city: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  cityName : {
-    fontSize : 68,
-    color : "black",
-    fontWeight : "500",
-  },  
-  wether : {
-    flex : 3,
+  cityName: {
+    fontSize: 68,
+    color: 'black',
+    fontWeight: '500',
   },
-  day : {
-    flex : 1,
-    backgroundColor : "red", 
-    justifyContent : "center",  
-    alignItems : "center",
+  weather: {
+    flex: 3,
   },
-  temp : {
-    fontSize : 158,
+  day: {
+    flex: 1,
+    alignItems: 'center',
   },
-  desp : {
-    fontSize : 100,
-  }
+  temp: {
+    marginTop : 45,
+    fontSize: 158,
+  },
+  desc: {
+    marginTop : -35,
+    fontSize: 100,
+  },
 });
